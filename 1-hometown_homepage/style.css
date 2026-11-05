@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family:
+    "Montserrat", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://www.kocaeli.bel.tr/files/uploads/gallery/default/1711535507-95c08f7bd2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 343px;
+  text-align: center;
+}
+
+.title-wrap {
+  width: 35%;
+}
+
+h1.title,
+h2.subtitle {
+  padding: 5px 10px;
+  background-color: #BFDBF7;
+  border-radius: 10%;
+}
+
+h1.title {
+  font-weight: 600;
+}
+
+h2.subtitle {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+main {
+  background-color: #053C5E;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  height: 378px;
+  color: #FF8C42;
+}
+
+.places {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.place-card {
+  display: block;
+}
+
+.place-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.personal-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  margin: 100px auto 100px;
+  background-color: #BFDBF7;
+  border-bottom: 10px solid #053C5E;
+  border-radius: 10px;
+  padding: 0 30px;
+  gap: 30px;
+}
+
+.guide-portrait {
+  width: 160px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.guide-info {
+  text-align: center;
+  color: #053C5E;
+}

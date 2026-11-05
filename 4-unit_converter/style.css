@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  padding: 10px 20px;
+  color: white;
+}
+
+.input-container {
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #6943ff;
+}
+
+input {
+  font-size: 40px;
+  border-radius: 5px;
+  border: 2px solid #B295FF;
+  margin: 20px auto;
+  width: 90px;
+  background-color: #6943ff;
+  color: white;
+  text-align: center;
+}
+
+button {
+  width: 117px;
+  font-size: 1.2rem;
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #fb5607;
+  color: white;
+}
+
+button:active {
+  color: black;
+  background-color: white;
+}
+
+/* For Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.output-container {
+  border-radius: 0 0 10px 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #f4f4f4;
+}
+
+.output-info {
+  text-align: center;
+  padding: 10px 20px;
+  background-color: white;
+  margin: 10px 20px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}

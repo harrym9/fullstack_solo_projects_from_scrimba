@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static.vecteezy.com/system/resources/previews/015/180/869/non_2x/basketball-scoreboard-icon-outline-style-vector.jpg"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/cursed-timer-ulil"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="scoreboard">
+        <div class="home">
+          <h1 class="teams">HOME</h1>
+          <div class="score" id="home-score">0</div>
+          <div class="buttons">
+            <button onclick="addPointToHome(1)">+1</button>
+            <button onclick="addPointToHome(2)">+2</button>
+            <button onclick="addPointToHome(3)">+3</button>
+          </div>
+        </div>
+        <div>
+          <button class="reset-btn" onclick="resetPoints()">Reset</button>
+        </div>
+        <div class="guest">
+          <h1 class="teams">GUEST</h1>
+          <div class="score" id="guest-score">0</div>
+          <div class="buttons">
+            <button onclick="addPointToGuest(1)">+1</button>
+            <button onclick="addPointToGuest(2)">+2</button>
+            <button onclick="addPointToGuest(3)">+3</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

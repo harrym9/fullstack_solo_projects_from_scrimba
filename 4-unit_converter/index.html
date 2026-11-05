@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://www.elneo.com/sites/default/files/uploads/com.fluffydelusions.app_.convertunits.jpg"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Unit Converter</title>
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <div class="input-container">
+          <h1 class="title">Metric/Imperial Unit Conversion</h1>
+          <input
+            type="number"
+            id="input-el"
+            name="unit number"
+            value="1"
+          />
+          <button id="convert-btn">Convert</button>
+        </div>
+        <div class="output-container">
+          <div class="output-info">
+            <h2>Length (Meter/Feet)</h2>
+            <p id="meter-feet">1 meters = 3.281 feet | 1 feet = 0.304 meters</p>
+          </div>
+          <div class="output-info">
+            <h2>Volume (Liters/Gallons)</h2>
+            <p id="liter-gallon">
+              1 liters = 0.219 gallons | 1 gallons = 4.546 liters
+            </p>
+          </div>
+          <div class="output-info">
+            <h2>Mass (Kilograms/Pounds)</h2>
+            <p id="kilo-pound">
+              1 kilos = 2.205 pounds | 1 pounds = 0.453 kilos
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
