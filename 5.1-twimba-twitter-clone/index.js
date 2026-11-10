@@ -10,7 +10,7 @@ document.addEventListener("click", function (e) {
     handleReplyClick(e.target.dataset.reply);
   } else if (e.target.id === "tweet-btn") {
     handleTweetBtnClick();
-  } else if (e.target.id === "comment-btn") {
+  } else if (e.target.dataset.comment) {
     handleCommentBtnClick(e.target.dataset.comment);
   }
 });
@@ -70,7 +70,7 @@ function handleTweetBtnClick() {
 }
 
 function handleCommentBtnClick(tweetId) {
-  const commentInput = document.querySelector(".comment-input").value;
+  let commentInput = document.querySelector(`.comment-input-${tweetId}`).value;
 
   const newComment = {
     handle: `@Scrimba`,
@@ -80,14 +80,15 @@ function handleCommentBtnClick(tweetId) {
 
   if (commentInput && commentInput.trim() != 0) {
     for (let tweet of tweetsData) {
+      console.log(tweet.replies);
       if (tweet.uuid === tweetId) {
-        console.log(tweet.replies)
         tweet.replies.unshift(newComment);
       }
     }
   }
-  
-  render()
+
+  render();
+  commentInput = "";
 }
 
 function getFeedHtml() {
@@ -106,18 +107,7 @@ function getFeedHtml() {
       retweetIconClass = "retweeted";
     }
 
-    let repliesHtml = `
-    <div class="tweet-reply-user">
-        <div class="tweet-inner-user">
-            <img src="images/scrimbalogo.png" class="profile-pic">
-            <div>
-                <p class="handle">@Scrimba</p>
-                <input type='text' placeholder='Type a comment' class='comment-input'>
-                <button id='comment-btn' data-comment='${tweet.uuid}'>Comment</button>
-            </div>
-        </div>
-    </div>  
-    `;
+    let repliesHtml = "";
     if (tweet.replies.length > 0) {
       tweet.replies.forEach(function (reply) {
         repliesHtml += `
@@ -164,6 +154,17 @@ function getFeedHtml() {
         </div>            
     </div>
     <div class="hidden" id="replies-${tweet.uuid}">
+      <div class="tweet-reply-user">
+            <div class="tweet-inner-user">
+                <img src="images/scrimbalogo.png" class="profile-pic">
+                <div>
+                    <p class="handle">@Scrimba</p>
+                    <input type='text' placeholder='Type a comment' class='comment-input-${tweet.uuid} comment-input'>
+                    <button class='comment-btn'
+                    data-comment='${tweet.uuid}'>Comment</button>
+                </div>
+            </div>
+        </div>
         ${repliesHtml}
     </div>   
 </div>

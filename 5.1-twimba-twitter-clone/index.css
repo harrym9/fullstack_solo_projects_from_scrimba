@@ -63,7 +63,7 @@ textarea {
 }
 
 #tweet-btn,
-#comment-btn {
+.comment-btn {
   background-color: #1da1f2;
   border: none;
   color: white;
@@ -75,7 +75,7 @@ textarea {
   font-weight: 600;
 }
 
-#comment-btn {
+.comment-btn {
   font-size: 0.9rem;
   padding: 5px 8px;
   font-weight: 500;
