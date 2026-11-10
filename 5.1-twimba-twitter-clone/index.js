@@ -48,9 +48,9 @@ function handleReplyClick(replyId) {
 }
 
 function handleTweetBtnClick() {
-  const tweetInput = document.getElementById("tweet-input").value;
+  const tweetInput = document.getElementById("tweet-input");
 
-  if (tweetInput && tweetInput.trim() != 0) {
+  if (tweetInput.value && tweetInput.value.trim() != 0) {
     tweetsData.unshift({
       handle: `@Scrimba`,
       profilePic: `images/scrimbalogo.png`,
@@ -86,9 +86,8 @@ function handleCommentBtnClick(tweetId) {
       }
     }
   }
-
   render();
-  commentInput = "";
+  document.getElementById(`replies-${tweetId}`).classList.toggle("hidden");
 }
 
 function getFeedHtml() {
