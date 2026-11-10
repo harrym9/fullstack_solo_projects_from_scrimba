@@ -1,0 +1,174 @@
+body {
+  background-color: #a31621;
+  margin: 0;
+  font-family: "Smythe", sans-serif;
+}
+
+/* MULTIPLE */
+header,
+main,
+footer {
+  margin: 0 auto;
+  width: 400px;
+}
+
+/* HEADER */
+header {
+  height: 200px;
+  background-image: url("https://images5.alphacoders.com/102/thumb-1920-1028508.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0% 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0;
+}
+
+.title,
+.sub-title {
+  color: white;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.title {
+  padding-top: 20px;
+}
+
+/* MAIN */
+
+main {
+  background-color: #bfdbf7;
+  padding-bottom: 2px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  padding: 20px 0;
+  margin: 0 30px;
+}
+
+.product-image {
+  width: 70px;
+}
+
+.product-name,
+.product-ingredients,
+.product-price {
+  margin: 5px;
+}
+
+.add-btn {
+  margin-left: auto;
+  border: 1px solid grey;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+}
+
+.add-btn:hover {
+  background-color: #053c5e;
+  color: white;
+  border-color: white;
+}
+
+.add-btn:active {
+  background-color: green;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #bfdbf7;
+}
+
+footer h3 {
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.order,
+.checkout {
+  margin: 0 30px;
+}
+
+.orders {
+  padding-bottom: 10px;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px dotted black;
+}
+
+.order:last-child {
+  border-bottom: none;
+}
+
+.order p {
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  background-color: #00abf0;
+  color: #ffffff;
+}
+
+.remove-btn {
+  border: 1px solid red;
+  border-radius: 20px;
+  background-color: #bfdbf7;
+  color: red;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+.remove-btn:hover {
+  background-color: red;
+  color: white;
+  border-color: white;
+}
+
+.order-name,
+.order-price {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.order-price {
+  margin-left: auto;
+}
+
+.total-price-info {
+  display: flex;
+  border-top: 2px solid black;
+}
+
+.total-price-info h4,
+.total-price {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.total-price {
+  margin-left: auto;
+}
+
+.order-btn {
+  background-color: green;
+  color: white;
+  width: 100%;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}
