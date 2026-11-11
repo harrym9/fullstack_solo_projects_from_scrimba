@@ -172,3 +172,32 @@ footer h3 {
   font-size: 1.4rem;
   margin-bottom: 2px;
 }
+
+/* PAYMENT MODAL */
+
+.payment-modal {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}

@@ -46,45 +46,7 @@
     <main>
       <div class="menu">
         <!-- js -->
-        <div class="menu-item">
-          <img
-            class="product-image"
-            src="assets/images/pizza.png"
-            alt="Photo of the Pizza slice for the menu"
-          />
-          <div class="product-info">
-            <h2 class="product-name">Pizza</h2>
-            <p class="product-ingredients">pepperoni, mushroom, mozarella</p>
-            <p class="product-price">$14</p>
-          </div>
-          <button class="add-btn">+</button>
-        </div>
-        <div class="menu-item">
-          <img
-            class="product-image"
-            src="assets/images/pizza.png"
-            alt="Photo of the Pizza slice for the menu"
-          />
-          <div class="product-info">
-            <h2 class="product-name">Pizza</h2>
-            <p class="product-ingredients">pepperoni, mushroom, mozarella</p>
-            <p class="product-price">$14</p>
-          </div>
-          <button class="add-btn">+</button>
-        </div>
-        <div class="menu-item">
-          <img
-            class="product-image"
-            src="assets/images/pizza.png"
-            alt="Photo of the Pizza slice for the menu"
-          />
-          <div class="product-info">
-            <h2 class="product-name">Pizza</h2>
-            <p class="product-ingredients">pepperoni, mushroom, mozarella</p>
-            <p class="product-price">$14</p>
-          </div>
-          <button class="add-btn">+</button>
-        </div>
+
         <!-- js -->
       </div>
     </main>
@@ -115,6 +77,44 @@
         <button class="order-btn">Complete Order</button>
       </div>
     </footer>
+    <div class="payment-modal hidden">
+      <h1>Enter Card Details</h1>
+      <form>
+        <input
+          placeholder="John Doe"
+          type="text"
+          id="card-holder-f-name"
+          name="card-holder-f-name"
+          required
+        />
+        <input
+          placeholder="1234 5678 9000 0000"
+          type="text"
+          id="card-number"
+          name="card-number"
+          inputmode="numeric"
+          minlength="15"
+          maxlength="19"
+          required
+        />
+        <input
+          placeholder="123"
+          type="text"
+          id="cvv-number"
+          name="cvv-number"
+          minlength="3"
+          maxlength="3"
+          required
+        />
+        <input
+          type="month"
+          id="card-expiration"
+          name="card-expiration"
+          required
+        />
+        <input type="button" value="Place Order" />
+      </form>
+    </div>
     <script src="script.js" type="module"></script>
   </body>
 </html>
