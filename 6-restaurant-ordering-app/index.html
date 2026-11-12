@@ -45,53 +45,44 @@
     </header>
     <main>
       <div class="menu">
-        <!-- js -->
-
-        <!-- js -->
+        <!-- Menu will listed here via JS -->
       </div>
     </main>
-    <footer>
-      <h3>Your Order:</h3>
-      <div class="orders">
-        <div class="order">
-          <p class="order-name">Pizza</p>
-          <button class="remove-btn">remove</button>
-          <p class="order-price">$14</p>
+    <footer class="order-details">
+      <div class="inner-wrap-footer">
+        <h3>Your Order:</h3>
+        <div class="orders">
+          <!-- Orders will listed here via JS! -->
         </div>
-        <div class="order">
-          <p class="order-name">Pizza</p>
-          <button class="remove-btn">remove</button>
-          <p class="order-price">$14</p>
-        </div>
-        <div class="order">
-          <p class="order-name">Pizza</p>
-          <button class="remove-btn">remove</button>
-          <p class="order-price">$14</p>
+        <div class="checkout">
+          <div class="total-price-info">
+            <h4>Total Price:</h4>
+            <p class="total-price">$0</p>
+          </div>
+          <button class="order-btn disabled" id="order-btn">
+            Complete Order
+          </button>
         </div>
       </div>
-      <div class="checkout">
-        <div class="total-price-info">
-          <h4>Total Price:</h4>
-          <p class="total-price">$14</p>
-        </div>
-        <button class="order-btn">Complete Order</button>
+      <div class="complete-message hidden">
+        <!-- Completed Order message via js -->
       </div>
     </footer>
     <div class="payment-modal hidden">
       <h1>Enter Card Details</h1>
-      <form>
+      <form id="customer-card-details">
         <input
           placeholder="John Doe"
           type="text"
           id="card-holder-f-name"
-          name="card-holder-f-name"
+          name="cardHolderFullName"
           required
         />
         <input
           placeholder="1234 5678 9000 0000"
           type="text"
           id="card-number"
-          name="card-number"
+          name="cardNumber"
           inputmode="numeric"
           minlength="15"
           maxlength="19"
@@ -101,7 +92,7 @@
           placeholder="123"
           type="text"
           id="cvv-number"
-          name="cvv-number"
+          name="cvvNumber"
           minlength="3"
           maxlength="3"
           required
@@ -109,10 +100,10 @@
         <input
           type="month"
           id="card-expiration"
-          name="card-expiration"
+          name="cardExpiration"
           required
         />
-        <input type="button" value="Place Order" />
+        <input type="submit" value="Place Order" id="pay-btn" />
       </form>
     </div>
     <script src="script.js" type="module"></script>

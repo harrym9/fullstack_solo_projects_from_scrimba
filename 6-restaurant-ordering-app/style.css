@@ -170,7 +170,28 @@ footer h3 {
   border: none;
   padding: 15px 30px;
   font-size: 1.4rem;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.complete-message {
+  padding: 25px 30px;
+  text-align: center;
+}
+
+.complete-message h1 {
+  background-color: #ecfdf5;
+  color: #065f46;
+  padding: 20px;
+  margin: 0;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  font-weight: normal;
 }
 
 /* PAYMENT MODAL */
