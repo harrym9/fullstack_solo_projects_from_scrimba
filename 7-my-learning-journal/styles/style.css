@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Ubuntu", monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+/* HEADER */
+nav,
+.nav-links,
+.logo-name {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.off-screen-menu {
+  background-color: rgb(34, 37, 49);
+  color: whitesmoke;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  transition: 0.3s ease;
+}
+
+nav {
+  background-color: rgb(34, 37, 49);
+  color: whitesmoke;
+  padding: 1rem;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+nav {
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.ham-menu {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.ham-menu span {
+  height: 5px;
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#logo {
+  width: 30px;
+}
+
+header h1 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header a:hover {
+  color: limegreen;
+}
+
+/* MAIN : HERO */
+
+.hero {
+  background-image: url("../assets/images/main.png");
+  background-position: center;
+  background-size: cover;
+  color: whitesmoke;
+  text-shadow: 0 0 10px black;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 1rem;
+}
+
+.heading,
+.sub-heading,
+.hero data {
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.hero h1 {
+  font-size: 1.4rem;
+}
+
+.hero p {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  width: 80%;
+}
+
+/* MAIN : POSTS */
+
+.posts {
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.post {
+  border-radius: 5px;
+  margin: 2rem 1rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.post img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.post-header,
+.post-short,
+.post data {
+  padding: 0.5rem 1rem;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+.post data {
+  display: block;
+  padding-bottom: 0;
+}
+
+.post a {
+  color: black;
+}
+
+.post:hover {
+  background-color: whitesmoke;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  background-color: rgb(34, 37, 49);
+}
+
+footer h3,
+footer p {
+  color: whitesmoke;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+footer p {
+  margin-top: 10px;
+  font-weight: 200;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 600px) {
+  .posts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .posts {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+    line-height: 3rem;
+    width: 80%;
+  }
+}

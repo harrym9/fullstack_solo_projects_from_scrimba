@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Viewport Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/posts.css" />
+    <title>Blog Four | My Learning Journal</title>
+    <script src="../script.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html" class="logo-name">
+          <img src="../assets/logo.png" alt="logo" id="logo" />
+          <h1>My Learning Journal</h1>
+        </a>
+        <div class="off-screen-menu">
+          <ul>
+            <li><a href="../index.html">home</a></li>
+            <li><a href="../about.html">about</a></li>
+            <li><a href="../contact.html">contact</a></li>
+          </ul>
+        </div>
+        <div class="ham-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="post-active">
+        <data value="16.11.2026">16.11.2026</data>
+        <h1 class="title">Blog four: Async JavaScript & Working with APIs</h1>
+        <p class="sub-title">
+          Working with asynchronous JavaScript and REST APIs in the Scrimba
+          Fullstack course. Fetching live data and handling promises opened up a
+          whole new world of dynamic web apps.
+        </p>
+        <img
+          src="../assets/images/blog1.png"
+          alt="opened code editor with codes in the laptop"
+        />
+        <h2>From Static Pages to Live Data</h2>
+        <p>
+          Understanding how fetch(), Promises, and async/await work under the
+          hood transformed how I think about web development. Instead of
+          hardcoding every piece of data in HTML, I can query external APIs and
+          render cards dynamically.
+        </p>
+        <h2>Handling Errors Gracefully</h2>
+        <p>
+          Scrimba's API module also showed me why try/catch blocks and checking
+          response.ok are essential. Network requests can fail anytime, and
+          giving users clear feedback makes an app feel reliable.
+        </p>
+      </div>
+      <div class="recent-posts">
+        <h2 class="recents">Recent posts</h2>
+        <div class="posts">
+          <article class="post">
+            <a href="./blog-1.html">
+              <img
+                src="../assets/images/blog1.png"
+                alt="opened code editor with codes in the laptop"
+              />
+              <data value="16.11.2026">16.11.2026</data>
+              <h2 class="post-header">Blog one</h2>
+              <p class="post-short">
+                Starting the Scrimba Fullstack Developer Path! Diving back into
+                semantic HTML and modern CSS fundamentals made me realize how
+                much cleaner my layouts can be with a solid foundation.
+              </p>
+            </a>
+          </article>
+          <article class="post">
+            <a href="./blog-5.html">
+              <img
+                src="../assets/images/blog1.png"
+                alt="opened code editor with codes in the laptop"
+              />
+              <data value="16.11.2026">16.11.2026</data>
+              <h2 class="post-header">Blog five</h2>
+              <p class="post-short">
+                Stepping into the backend side of the Scrimba Fullstack Path
+                with Node.js and Express. Creating my first custom server routes
+                and connecting frontend to backend was super exciting.
+              </p>
+            </a>
+          </article>
+          <article class="post">
+            <a href="./blog-6.html">
+              <img
+                src="../assets/images/blog1.png"
+                alt="opened code editor with codes in the laptop"
+              />
+              <data value="16.11.2026">16.11.2026</data>
+              <h2 class="post-header">Blog six</h2>
+              <p class="post-short">
+                Solo Project time on Scrimba! Putting everything together—from
+                responsive CSS Grid to clean JavaScript modules—without hints
+                has been the best way to test my fullstack skills.
+              </p>
+            </a>
+          </article>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h3>My Learning Journal</h3>
+      <p>Copyright ©2026</p>
+    </footer>
+  </body>
+</html>
