@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Tags -->
+    <meta
+      name="description"
+      content="Generate harmonious color schemes from any seed color and copy hex codes with a single click."
+    />
+    <meta
+      name="keywords"
+      content="color picker, color scheme generator, palette, hex codes"
+    />
+    <meta name="theme-color" content="#003049" />
+    <meta property="og:title" content="Color Picker" />
+    <meta
+      property="og:description"
+      content="Generate harmonious color schemes from any seed color and copy hex codes with a single click."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Title -->
+    <title>Color Picker</title>
+    <!-- STYLE AND SCRIPT -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="head">
+        <form id="form">
+          <input type="color" name="color" />
+          <select id="mode" required>
+            <option value="" disabled selected>Select Mode...</option>
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome Dark</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic Complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
+          </select>
+          <input type="submit" value="Get Color Scheme" id="pick-btn" />
+        </form>
+      </div>
+      <div class="output">
+        <div class="colors">
+          <div class="color color-0" title="Click to copy"></div>
+          <p id="color-0" title="Click to copy">#780000</p>
+        </div>
+        <div class="colors">
+          <div class="color color-1" title="Click to copy"></div>
+          <p id="color-1" title="Click to copy">#c1121f</p>
+        </div>
+        <div class="colors">
+          <div class="color color-2" title="Click to copy"></div>
+          <p id="color-2" title="Click to copy">#fdf0d5</p>
+        </div>
+        <div class="colors">
+          <div class="color color-3" title="Click to copy"></div>
+          <p id="color-3" title="Click to copy">#003049</p>
+        </div>
+        <div class="colors">
+          <div class="color color-4" title="Click to copy"></div>
+          <p id="color-4" title="Click to copy">#669bbc</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
