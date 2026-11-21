@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1b4d2e;
+    background-image: url("assets/table.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Exo 2", sans-serif;
+    color: #ffffff;
+}
+
+/* Mobile-first base styles */
+
+.top {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+}
+
+.top>p {
+    margin: 0;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+.game-board {
+    width: 100%;
+    max-width: 960px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    min-height: 1.3em;
+}
+
+.score {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.5rem 0;
+}
+
+.card-slot {
+    height: clamp(120px, 24dvh, 180px);
+    aspect-ratio: 5 / 7;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+img.card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+button {
+    font-family: inherit;
+    font-weight: 700;
+    color: #1a1a1a;
+    background-color: #fff100;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease, opacity 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #ffe000;
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+button#new-deck {
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+button.draw {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+/* Tablet & larger phones */
+@media (min-width: 600px) {
+    .top {
+        padding: 1rem 1.5rem;
+    }
+
+    .top>p {
+        font-size: 1.1rem;
+    }
+
+    .game-board {
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .score {
+        font-size: 1.25rem;
+    }
+
+    .cards {
+        gap: 1rem;
+    }
+
+    .card-slot {
+        height: clamp(160px, 26dvh, 220px);
+    }
+
+    .controls {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    button#new-deck {
+        padding: 0.7rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    button.draw {
+        max-width: 360px;
+        border-radius: 8px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    h1 {
+        font-size: 2.35rem;
+    }
+
+    .score {
+        font-size: 1.35rem;
+    }
+
+    .card-slot {
+        height: clamp(180px, 28dvh, 250px);
+    }
+}
+
+/* Short landscape screens (e.g. phones in landscape) */
+@media (max-height: 550px) and (orientation: landscape) {
+    .top {
+        padding: 0.4rem 1rem;
+    }
+
+    .game-board {
+        gap: 0.35rem;
+        padding: 0.25rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .score {
+        font-size: 0.95rem;
+    }
+
+    .cards {
+        flex-direction: row;
+        gap: 1.25rem;
+        margin: 0.25rem 0;
+    }
+
+    .card-slot {
+        height: clamp(100px, 38dvh, 150px);
+    }
+
+    button.draw {
+        padding: 0.55rem 1.25rem;
+        font-size: 1rem;
+    }
+}
