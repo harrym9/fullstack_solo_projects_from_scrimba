@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100dvh;
+    font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-image: url("./assets/movie_banner.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.heading {
+    color: white;
+    margin: 0;
+    text-shadow: 0 0 3px white;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border: 2px dotted white;
+    border-radius: 20px;
+    padding: 8px;
+    text-shadow: 0 0 1px white;
+}
+
+header a:hover {
+    transition: .5 ease;
+    border-style: solid;
+    text-shadow: 0 0 5px white;
+}
+
+
+/* SEARCH */
+.search {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    max-width: 500px;
+    transform: translateY(50%);
+    display: flex;
+}
+
+.search-input {
+    background-image: url(assets/search.svg);
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    background-size: 16px;
+    padding: 10px 16px 10px 38px;
+    border: 1px solid grey;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    flex: 1;
+    min-width: 0;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: red;
+}
+
+.search-btn {
+    padding: 10px 40px;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    border-color: white;
+    background-color: red;
+    color: white;
+}
+
+
+/* MAIN */
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.empty-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.film {
+    display: flex;
+}
+
+.film-poster {
+    width: 150px;
+}
