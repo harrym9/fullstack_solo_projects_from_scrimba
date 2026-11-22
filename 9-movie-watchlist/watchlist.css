@@ -1,3 +1,7 @@
+main {
+    padding-top: 2rem;
+}
+
 .empty-placeholder h1 {
     color: #9ca3af;
     font-size: clamp(1.15rem, 3.5vw, 1.5rem);

@@ -1,6 +1,8 @@
 # Game of War
 
-![Game of War UI](images/main.png)
+<p align="center">
+  <img src="images/main.png" alt="Game of War UI" width="420" />
+</p>
 
 A responsive, mobile-first browser implementation of the classic **Game of War** card game built with vanilla HTML, CSS, and JavaScript using the [Deck of Cards API](https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/).
 

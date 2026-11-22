@@ -126,6 +126,10 @@ main {
     padding: 3.5rem 1.25rem 2.5rem;
 }
 
+main:has(.films-list:not(:empty)) {
+    justify-content: flex-start;
+}
+
 .empty-placeholder {
     display: flex;
     flex-direction: column;
