@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Watchlist</title>
     <link rel="stylesheet" href="index.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js"></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <h1 class="heading">Find your film</h1>
         <a href="watchlist.html">My Watchlist</a>
         <form class="search">
-            <input type="text" class="search-input" placeholder="Search for a movie">
+            <input type="text" name="search-film" class="search-input" placeholder="Search for a movie">
             <button class="search-btn">Search</button>
         </form>
     </header>
@@ -28,16 +28,18 @@
                 <img src="https://m.media-amazon.com/images/M/MV5BOTA1Mzc2N2ItZWRiNS00MjQzLTlmZDQtMjU0NmY1YWRkMGQ4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg"
                     alt="FILLLLLLLL" class="film-poster">
                 <div class="film-info">
-                    <div>
-                        <h2 class="film-title">name</h2>
-                        <p>rating</p>
+                    <div class="first-info">
+                        <h2 class="film-title">Harry Potter and the Deathly Hallows: Part 2</h2>
+                        <p>85/100</p>
                     </div>
-                    <div>
-                        <p>duration</p>
-                        <p>genre</p>
-                        button
+                    <div class="second-info">
+                        <p class="film-duration">130 min</p>
+                        <p class="film-genre">Adventure, Family, Fantasy</p>
+                        <button class="add-btn" id="add-btn">+watchlist</button>
                     </div>
-
+                    <p class="film-plot">Harry, Ron and Hermione set out on a quest to eliminate the remaining
+                        horcruxes. On the other hand, the students and teachers must unite to defend Hogwarts against
+                        Lord Voldemort and his army.</p>
                 </div>
             </div>
         </section>

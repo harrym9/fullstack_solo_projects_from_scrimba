@@ -111,11 +111,49 @@ main {
     align-items: center;
 }
 
+/* MAIN: FILM CARDS */
 
 .film {
     display: flex;
+    max-width: 700px;
+    gap: 2rem;
 }
+
+.film-info {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .film-poster {
     width: 150px;
+}
+
+.first-info,
+.second-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first-info {
+    margin-bottom: 20px;
+}
+
+.second-info {
+    margin-bottom: 20px;
+}
+
+.film-title {
+    font-size: 1.3rem;
+}
+
+.film-title,
+.film p {
+    margin: 0;
+}
+
+
+.film-plot {
+    line-height: 30px;
 }
