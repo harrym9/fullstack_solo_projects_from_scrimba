@@ -18,8 +18,12 @@ app.post("/translate", async (req, res) => {
     const messages = [
         {
             role: "system",
-            content: `You are a translator bot with 3 languages: French, German, and Spanish.
-                      Translate the user's input into ${language} and respond only with the translation.`
+            content: `
+                You are a translator bot supporting French, Spanish, and Japanese.
+                Translate the user's input into ${language}.
+                Respond only with the translation.
+                If the target language is Japanese, include the romaji pronunciation in parentheses after the translation.
+                `
         },
         {
             role: "user",

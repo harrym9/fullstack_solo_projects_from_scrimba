@@ -1,6 +1,7 @@
 document.addEventListener("submit", async (e) => {
     e.preventDefault()
     const userInput = document.getElementById("input-data").value
+    const userTargetLanguage = document.querySelector('input[ name = "languages" ]:checked').value
 
     try {
         const response = await fetch("/translate", {
@@ -10,7 +11,7 @@ document.addEventListener("submit", async (e) => {
             },
             body: JSON.stringify({
                 text: userInput,
-                language: "German"
+                language: userTargetLanguage
             })
         })
         if (!response.ok) {

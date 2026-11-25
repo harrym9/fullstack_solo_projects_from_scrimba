@@ -2,6 +2,12 @@
 <html lang="en">
 
 <head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Meta: Viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PollyGlot: Ai translator buddy</title>
@@ -9,10 +15,36 @@
 </head>
 
 <body>
-    <form>
-        <textarea name="input-data" id="input-data" placeholder="Type here..." required></textarea>
-        <input type="submit" value="Translate">
-    </form>
+    <header>
+        <img src="assets/parrot.png" alt="PollyGlot colorful parrot logo" class="logo">
+        <h1 class="title"><span class="">PollyGlot</span>Perfect Translation Every Time</h1>
+    </header>
+    <main>
+        <div class="main-wrapper">
+            <form>
+                <label for="input-data">Text to translate 👇</label>
+                <textarea name="input-data" id="input-data" placeholder="Type here..." required></textarea>
+                <label for="languages">Select language 👇</label>
+                <label for="french" class="language">
+                    <input type="radio" name="languages" value="french" id="french" checked>
+                    <span>French</span>
+                    <img src="assets/fr-flag.png" alt="French flag">
+                </label>
+                <label for="spanish" class="language">
+                    <input type="radio" name="languages" value="spanish" id="spanish">
+                    <label for="spanish">Spanish</label>
+                    <img src="assets/sp-flag.png" alt="Spain flag">
+                </label>
+                <label for="japanese" class="language">
+                    <input type="radio" name="languages" value="japanese" id="japanese">
+                    <span>Japanese</span>
+                    <img src="assets/jpn-flag.png" alt="Japan flag">
+                </label>
+                <input type="submit" value="Translate" id="translate-btn">
+            </form>
+        </div>
+    </main>
+
     <script src="index.js" type="module"></script>
 </body>
 
