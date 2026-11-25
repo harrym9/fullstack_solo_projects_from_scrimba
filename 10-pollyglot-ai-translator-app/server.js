@@ -1,0 +1,45 @@
+import express from "express"
+import OpenAI from "openai"
+import { CONFIG } from "../config.js"
+
+const app = express()
+const PORT = 3000
+
+app.use(express.json())
+app.use(express.static("public"));
+
+const agent = new OpenAI({
+    baseURL: CONFIG.pollyGlot.aiUrl,
+    apiKey: CONFIG.pollyGlot.aiKey,
+})
+
+app.post("/translate", async (req, res) => {
+    const { text, language } = req.body
+    const messages = [
+        {
+            role: "system",
+            content: `You are a translator bot with 3 languages: French, German, and Spanish.
+                      Translate the user's input into ${language} and respond only with the translation.`
+        },
+        {
+            role: "user",
+            content: text
+        }
+    ]
+    try {
+        const response = await agent.chat.completions.create({
+            model: CONFIG.pollyGlot.aiModel,
+            messages
+        })
+        console.log(response.choices[0].message.content)
+        res.json({ translation: response.choices[0].message.content })
+    }
+    catch (error) {
+        console.error(error)
+        res.status(500).json({ error: "Translation failed" })
+    }
+})
+
+app.listen(PORT, () => {
+    console.log(`Server running at http://localhost:${PORT}`)
+})
