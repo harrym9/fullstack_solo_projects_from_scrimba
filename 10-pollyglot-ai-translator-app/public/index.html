@@ -16,30 +16,37 @@
 
 <body>
     <header>
-        <img src="assets/parrot.png" alt="PollyGlot colorful parrot logo" class="logo">
-        <h1 class="title"><span class="">PollyGlot</span>Perfect Translation Every Time</h1>
+        <div class="header-wrapper">
+            <img src="assets/parrot.png" alt="PollyGlot colorful parrot logo" class="logo">
+            <h1 class="title"><span class="">PollyGlot</span>Perfect Translation Every Time</h1>
+        </div>
     </header>
     <main>
         <div class="main-wrapper">
             <form>
-                <label for="input-data">Text to translate 👇</label>
-                <textarea name="input-data" id="input-data" placeholder="Type here..." required></textarea>
-                <label for="languages">Select language 👇</label>
-                <label for="french" class="language">
-                    <input type="radio" name="languages" value="french" id="french" checked>
-                    <span>French</span>
-                    <img src="assets/fr-flag.png" alt="French flag">
-                </label>
-                <label for="spanish" class="language">
-                    <input type="radio" name="languages" value="spanish" id="spanish">
-                    <label for="spanish">Spanish</label>
-                    <img src="assets/sp-flag.png" alt="Spain flag">
-                </label>
-                <label for="japanese" class="language">
-                    <input type="radio" name="languages" value="japanese" id="japanese">
-                    <span>Japanese</span>
-                    <img src="assets/jpn-flag.png" alt="Japan flag">
-                </label>
+                <label for="input-place" class="form-heading">Text to translate 👇</label>
+                <textarea name="input-place" id="input-place" placeholder="Type here..." required></textarea>
+                <p class="label-for-div">Select language 👇</p>
+                <div class="language-options" id="language-options">
+                    <label for="french" class="language">
+                        <input type="radio" name="languages" value="french" id="french" checked>
+                        <span>French</span>
+                        <img src="assets/fr-flag.png" alt="French flag">
+                    </label>
+                    <label for="spanish" class="language">
+                        <input type="radio" name="languages" value="spanish" id="spanish">
+                        <span>Spanish</span>
+                        <img src="assets/sp-flag.png" alt="Spain flag">
+                    </label>
+                    <label for="japanese" class="language">
+                        <input type="radio" name="languages" value="japanese" id="japanese">
+                        <span>Japanese</span>
+                        <img src="assets/jpn-flag.png" alt="Japan flag">
+                    </label>
+                </div>
+                <div class="show-translate hidden">
+                    <!-- TRANSLATED OUTPUT -->
+                </div>
                 <input type="submit" value="Translate" id="translate-btn">
             </form>
         </div>

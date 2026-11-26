@@ -1,7 +1,23 @@
-document.addEventListener("submit", async (e) => {
+const showTranslateDiv = document.querySelector(".show-translate")
+const languageOptionsDiv = document.querySelector(".language-options")
+const labelForDiv = document.querySelector(".label-for-div")
+const translateBtn = document.querySelector("#translate-btn")
+const inputPlace = document.getElementById("input-place")
+
+translateBtn.addEventListener("click", async (e) => {
     e.preventDefault()
-    const userInput = document.getElementById("input-data").value
-    const userTargetLanguage = document.querySelector('input[ name = "languages" ]:checked').value
+
+    if (translateBtn.value === "Start Over") {
+        setResultView(false)
+        return
+    }
+
+    const userInput = inputPlace.value.trim()
+    if (!userInput) return
+
+    const userTargetLanguage = document.querySelector('input[name="languages"]:checked').value
+    translateBtn.disabled = true
+    translateBtn.value = "Translating..."
 
     try {
         const response = await fetch("/translate", {
@@ -15,13 +31,30 @@ document.addEventListener("submit", async (e) => {
             })
         })
         if (!response.ok) {
-            throw Error("There something happened when fetching data from the server: " + response.status)
+            throw new Error(`Server error: ${response.status}`)
         }
         const data = await response.json()
-        console.log(data.translation)
-    }
-    catch (err) {
-        console.error("Error: " + err)
+        setResultView(true, data.translation)
+    } catch (err) {
+        console.error("Error:", err)
+        translateBtn.value = "Translate"
+    } finally {
+        translateBtn.disabled = false
     }
 })
 
+function setResultView(isResultVisible, translatedText = "") {
+    showTranslateDiv.classList.toggle("hidden", !isResultVisible)
+    languageOptionsDiv.classList.toggle("hidden", isResultVisible)
+    labelForDiv.textContent = isResultVisible ? "Your translation 👇" : "Select language 👇"
+    translateBtn.value = isResultVisible ? "Start Over" : "Translate"
+
+    if (isResultVisible) {
+        const p = document.createElement("p")
+        p.textContent = translatedText
+        showTranslateDiv.replaceChildren(p)
+    } else {
+        showTranslateDiv.replaceChildren()
+        inputPlace.value = ""
+    }
+}

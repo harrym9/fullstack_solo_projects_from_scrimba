@@ -35,7 +35,6 @@ app.post("/translate", async (req, res) => {
             model: CONFIG.pollyGlot.aiModel,
             messages
         })
-        console.log(response.choices[0].message.content)
         res.json({ translation: response.choices[0].message.content })
     }
     catch (error) {
